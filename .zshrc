@@ -1,7 +1,3 @@
-# Zsh Config
-Paste the following into your terminal:
-```bash
-cat ~/.zshrc
 #======== ls ========#
 alias ll='ls -la'
 alias lt='ls -lat'
@@ -20,4 +16,3 @@ zstyle ':vcs_info:git:*' formats ' %F{yellow}(%u%b)%f'
 
 # 3. Set the prompt
 PROMPT='%n:%~${vcs_info_msg_0_} %# '
-```
