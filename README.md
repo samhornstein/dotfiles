@@ -1,4 +1,7 @@
+# Zsh Config
+Paste the following into your terminal:
 ```bash
+cat ~/.zshrc
 #======== ls ========#
 alias ll='ls -la'
 alias lt='ls -lat'
