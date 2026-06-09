@@ -20,16 +20,17 @@ alias claude-gemma='export ANTHROPIC_BASE_URL="http://localhost:8888" && \
 alias claude-qwen='export ANTHROPIC_BASE_URL="http://localhost:8080" && \
   claude --model unsloth/Qwen3.6-27B-MTP-GGUF'
 
-#======== unsloth ========#
-alias unsloth-gemma='unsloth run --model unsloth/gemma-4-E2B-it-GGUF:UD-Q4_K_XL'
+#======== llm ========#
+alias run-gemma='unsloth run --model unsloth/gemma-4-E2B-it-GGUF:UD-Q4_K_XL'
 
-alias unsloth-qwen='unsloth run \
-  --model unsloth/Qwen3.6-27B-MTP-GGUF:UD-Q4_K_XL \
-  --temp 1.0 \
-  --top-p 0.95 \
-  --top-k 20 \
-  --min-p 0.00 \
-  --spec-type draft-mtp --spec-draft-n-max 2'
+alias run-qwen='export LLAMA_CACHE="unsloth/Qwen3.6-27B-MTP-GGUF" && \
+llama-server \
+    -hf unsloth/Qwen3.6-27B-MTP-GGUF:UD-Q4_K_XL \
+    --temp 0.6 \
+    --top-p 0.95 \
+    --top-k 20 \
+    --min-p 0.00 \
+    --spec-type draft-mtp --spec-draft-n-max 2'
   
 #======== ls ========#
 alias ll='ls -la'
