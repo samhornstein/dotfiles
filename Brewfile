@@ -1,4 +1,5 @@
 brew "cmake"
+brew "llama.cpp"
 brew "pi-coding-agent"
 cask "basictex"
 cask "brave-browser"
