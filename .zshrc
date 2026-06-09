@@ -14,10 +14,12 @@ fi
 export PATH="/usr/local/texlive/2026basic/bin/universal-darwin:$PATH"
 
 #======== claude ========#
-alias claude-gemma='export ANTHROPIC_BASE_URL="http://localhost:8888" && \
+alias claude-gemma='export CLAUDE_CODE_ATTRIBUTION_HEADER="0" && \
+  export ANTHROPIC_BASE_URL="http://localhost:8888" && \
   claude --model unsloth/gemma-4-E2B-it-GGUF'
 
-alias claude-qwen='export ANTHROPIC_BASE_URL="http://localhost:8080" && \
+alias claude-qwen='export CLAUDE_CODE_ATTRIBUTION_HEADER="0" && \
+  export ANTHROPIC_BASE_URL="http://localhost:8888" && \
   claude --model unsloth/Qwen3.6-27B-MTP-GGUF'
 
 #======== llm ========#
