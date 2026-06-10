@@ -15,18 +15,21 @@ export PATH="/usr/local/texlive/2026basic/bin/universal-darwin:$PATH"
 
 #======== claude ========#
 alias claude-gemma='export CLAUDE_CODE_ATTRIBUTION_HEADER="0" && \
-  export ANTHROPIC_BASE_URL="http://localhost:8888" && \
+  export ANTHROPIC_BASE_URL="http://localhost:8080" && \
   claude --model unsloth/gemma-4-E2B-it-GGUF'
 
 alias claude-qwen='export CLAUDE_CODE_ATTRIBUTION_HEADER="0" && \
-  export ANTHROPIC_BASE_URL="http://localhost:8888" && \
+  export ANTHROPIC_BASE_URL="http://localhost:8080" && \
   claude --model unsloth/Qwen3.6-27B-MTP-GGUF'
 
 #======== llm ========#
-alias run-gemma='unsloth run --model unsloth/gemma-4-E2B-it-GGUF:UD-Q4_K_XL'
+alias run-gemma='llama-server \
+    -hf unsloth/gemma-4-E2B-it-GGUF:UD-Q4_K_XL \
+    --temp 1.0 \
+    --top-p 0.95 \
+    --top-k 64'
 
-alias run-qwen='export LLAMA_CACHE="unsloth/Qwen3.6-27B-MTP-GGUF" && \
-llama-server \
+alias run-qwen='llama-server \
     -hf unsloth/Qwen3.6-27B-MTP-GGUF:UD-Q4_K_XL \
     --temp 0.6 \
     --top-p 0.95 \
@@ -49,3 +52,7 @@ zstyle ':vcs_info:git:*' formats ' (%b)'
 
 # 3. Set the prompt
 PROMPT='%~${vcs_info_msg_0_} $ '
+export HF_HOME=~/.cache/huggingface
+export HF_HOME=~/.cache/huggingface
+export HF_HOME=~/.cache/huggingface
+export HF_HOME=~/.cache/huggingface
