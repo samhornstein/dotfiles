@@ -23,6 +23,8 @@ alias claude-qwen='export CLAUDE_CODE_ATTRIBUTION_HEADER="0" && \
   claude --model unsloth/Qwen3.6-27B-MTP-GGUF'
 
 #======== llm ========#
+export HF_HOME=~/.cache/huggingface
+
 alias run-gemma='llama-server \
     -hf unsloth/gemma-4-E2B-it-GGUF:UD-Q4_K_XL \
     --temp 1.0 \
@@ -52,7 +54,3 @@ zstyle ':vcs_info:git:*' formats ' (%b)'
 
 # 3. Set the prompt
 PROMPT='%~${vcs_info_msg_0_} $ '
-export HF_HOME=~/.cache/huggingface
-export HF_HOME=~/.cache/huggingface
-export HF_HOME=~/.cache/huggingface
-export HF_HOME=~/.cache/huggingface
