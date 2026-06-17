@@ -21,11 +21,6 @@ alias claude-local='export CLAUDE_CODE_ATTRIBUTION_HEADER="0" && \
   export ANTHROPIC_BASE_URL="http://localhost:8080" && \
   claude --model local'
 
-#======== llm ========#
-export HF_HOME=~/.cache/huggingface
-
-alias run-gemma='llama-server \
-=======
 #======== llama ========#
 alias run-gemma-e2b='llama-server \
     -hf unsloth/gemma-4-E2B-it-GGUF:UD-Q4_K_XL \
